@@ -1,0 +1,217 @@
+
+/**********************************************************************
+GENERAL
+***********************************************************************/
+body {
+	font-family: 'Open sans', sans-serif; /* applied to everything on the site, except h1 */
+}
+
+#wrapper {
+	max-width: 940x; /* width no longer than 940px across, but it could be smaller */
+	margin: 0 auto; /*spacing around the element. first value sets top/bottom. auto fills in any space left or right */
+	padding: 0 5%; /*applying padding of 5% of the width of the wrapper element */
+}
+
+a {
+	text-decoration: none; /*no underlines on links*/
+}
+
+img {
+	max-width: 100%; /*important when resizing list items; tells images to fill width of parent container ONLY. this is important so that images don't break out of their containers*/ 
+}
+
+h3 {
+	margin: 0 0 1em 0; /* zero out margins on h3 element to separate from text. this is to always ensure there is space beneath it! */
+}
+
+/**********************************************************************
+HEADING
+***********************************************************************/
+header {
+	float: right; /* no use til desktop application */
+	margin: 0 0 30px 0; /* think clockwise, removes margins on top */
+	padding: 5px 0 0 0; /* same thing! separate text without removing margin on top of page*/
+	width: 100%; /*specify width because we made it float! */
+}
+
+/* logo text */
+#logo {
+	text-align: center; /* align text to center*/ /*some values can be keywords or numbers */
+	margin: 0; /*no spacing around edges, 0 on all four sides of element */
+}
+
+h1 {
+	font-family: 'Changa One', sans-serif;
+	margin: 15px 0; /* spacing only on top and bottom */
+	font-size: 1.75em; /* em: relative unit of measurement. 1 em = standard font size set by browser (16px by default), but h1 is a larger font, so this code will shrink font*/
+}
+
+h2 {
+	font-size: 0.75em; /* smaller font size */
+	margin: -5px 0 0; /* first value: sets top. second sets left/right, third sets bottom; negative value will pull elements closer together*/
+	font-weight: normal; /* unbold text */
+}
+
+
+
+/**********************************************************************
+NAVIGATION
+***********************************************************************/
+nav {
+	text-align: right;
+	padding: 10px 0;
+	margin: 20px 0 0;
+}
+
+/* center ul on page */
+nav ul {
+	list-style: none;
+	margin: 0 5px;
+	padding: 10px;
+}
+
+nav li {
+	display: inline-block; /*allows us to have side by side elements inline. still retain block like features such as height and width */
+}
+
+nav a {
+	font-weight: 800;
+	padding: 15px 10px;
+}
+
+
+/**********************************************************************
+FOOTER
+***********************************************************************/
+footer {
+	font-size: 0.75em;
+	text-align: center;
+	clear: both;
+	padding-top: 50px;
+	color: #ccc;
+}
+
+/*using a class */
+.social-icon {
+	height: 20px;
+	width: 20px;
+	margin: 0 5px;
+}
+
+
+
+/**********************************************************************
+PAGE: PORTFOLIO
+***********************************************************************/
+#gallery {
+	margin: 0;
+	padding: 10%;
+	list-style: none; /* removes bulletpoints from ul */
+}
+
+#gallery li {
+	float: left; /* makes li appear side by side, instead ontop/below */
+	width: 20%; /* each image takes up 45% of total width of parent element */
+	margin: 2.5%; /* after apply 45% width, we are leftover with 10%. so, we utilize this for the margin of each image. */
+	background-color: #362526; /*set background color of list element, including paragraph */
+	color: #bdc3c7; /* text color */
+}
+
+#gallery li a p {
+	margin: 0; /* p have margins on default, so take them off */
+	padding: 5%; /* relative to width of parent element */
+	font-size: 0.75em; /* make smaller */
+	color: #bdc3c7;
+}
+
+
+
+/**********************************************************************
+PAGE: ABOUT
+***********************************************************************/
+
+.profile-photo {
+	float : left;
+	display: block; /*allow auto margins to center to page, by default, images are displayed inline. but we want it to be before text*/
+	max-width:350px; /* sets maximum width */
+	margin: -5px 10px 30px; /* auto fills space */
+	border-radius: 25%; /*allows rounded corners. 100% means all corners are fully rounded */
+
+}
+
+
+
+/**********************************************************************
+PAGE: CONTACT;
+***********************************************************************/
+
+.contact-info {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	font-size: 0.9em;
+}
+
+/*select all anchor elements within contact-info class */
+.contact-info a {
+	display: block; /* each image takes up space, to give us space to work with */
+	min-height: 20px; /* no shorter than this */
+	background-repeat: no-repeat; /* by default, background images repeat. we only want it to repeat once */
+	background-size: 20px 20px; /* resize backgrounds */
+	padding: 0 0 0 30px; /* space on interior left side of elements, pushes text to right because there is padding on left */
+	margin: 0 0 10px; /*separation vertically of icons */
+
+}
+/*class within a class*/
+.contact-info li.phone a {
+	background-image: url('../img/phone.png'); /*path to image, two dots allow us to go up one directory -> out of css, then to img*/
+}
+
+.contact-info li.mail a {
+	background-image: url('../img/mail.png');
+}
+
+.contact-info li.instagram a {
+	background-image: url('../img/instagram.jpeg');
+}
+/**********************************************************************
+COLORS
+***********************************************************************/
+
+body {
+	background-color: #EDF5E1;
+	color: #999;
+}
+
+/* green header */
+header {
+	background-color: #6ab47b;
+	border-color: #599a68;
+}
+
+/* nav background on mobile */
+nav {
+	background: #599a68;
+}
+
+h1, h2 {
+	color: white;
+}
+
+/* link colors */
+a {
+	color: #6ab47b ;
+}
+
+/* color for nav link no matter what */
+nav a, nav a:visited { /* makes anchor elements (links) white even though they've already been visited */
+	color: white;
+}
+
+/* selected nav link color */
+nav a.selected, nav a:hover {
+	/* any item within nav a will get class */
+	/* nav a: hover makes other anchor elements get same color when hovered over with cursor */;
+	color: #C5C3C6;
+}
+
